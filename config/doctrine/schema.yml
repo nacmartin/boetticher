@@ -1,0 +1,29 @@
+TaskGroup:
+  columns:
+    name: { type: string(255), notnull: true}
+
+Task:
+  columns:
+    name: { type: string(255), notnull: true}
+    color: { type: string(6), notnull: true}
+    taskgroup_id: {type: integer, primary: true, notnull: true}
+  relations:
+    TaskGroup:
+      local: taskgroup_id
+      foreign: id
+      foreignAlias: Tasks
+      onDelete: CASCADE
+
+Uow:
+  columns:
+    start_time: {type: timestamp, notnull: true}
+    end_time: {type: timestamp}
+    task_id: {type: integer, primary: true, notnull: true}
+  relations:
+    Task:
+      local: task_id
+      foreign: id
+      foreignAlias: Uows
+      onDelete: CASCADE
+
+
