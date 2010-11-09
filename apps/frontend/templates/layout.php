@@ -9,6 +9,19 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <div class="topline">
+      <ul>
+      <?php if ($sf_user->isAuthenticated()): ?>
+        <li><?php echo $sf_user->getGuardUser()->getUsername()?></li>
+        <li><?php echo link_to('sign out', '@sf_guard_signout')?></li> 
+      <?php else: ?>
+        <li><?php echo link_to('sign in', '@sf_guard_signin')?></li> 
+      <?php endif ?>
+      </ul>
+    </div>
+    <div id="logo"><?php echo image_tag('logo.png')?></div>
+    <div id="content">
     <?php echo $sf_content ?>
+    </div>
   </body>
 </html>

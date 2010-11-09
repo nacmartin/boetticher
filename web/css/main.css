@@ -1,0 +1,163 @@
+body{
+  font-family: "trebuchet MS", Arial, Tahoma, Sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  background-color: #efefff;
+} 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #040;
+}
+
+.task-square{
+  border: solid 1px #888;
+  height: 15px;
+  width:  15px;
+  float: left;
+}
+
+.history-wrapper{
+  clear:both;
+}
+
+div.topline
+{
+  float:right;
+  padding: 0 1em;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.topline a,
+.topline a:link,
+.topline a:active,
+{
+	text-decoration: none;
+	color: #ccc;
+	text-transform: lowercase;
+    text-decoration: underline;
+}
+
+div.topline ul
+{
+	margin: 1em 0;
+	padding: 0;
+}
+div.topline li
+{
+	display: inline;
+	margin: 0;
+	padding: 0 2em 0 0;
+}
+.topline li a,
+.topline li a:link,
+.topline li a:hover,
+.topline li a:active,
+.topline li a:visited
+{
+}
+
+#logo{
+  margin: 20px;
+}
+
+#content{
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+#active-task{
+  padding: 5px;
+  background-color: #fff;
+  -moz-border-radius: 10px;
+  border: 1px solid #ccc;
+  -moz-box-shadow: 2px 2px 5px #aaa;
+}
+
+#current{
+  font-size: 36px;
+}
+
+td {
+  padding: 2px 10px;
+}
+
+.taskbox{
+  -moz-border-radius: 4px;
+  border: 1px solid #aaa;
+  padding: 3px;
+  background-color: #eee;
+}
+
+.taskbox td{
+  padding: 1px;
+}
+
+#task-started{
+  padding-right: 2px;
+}
+
+#task-timeago{
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 36px;
+}
+#task-textago{
+  padding-left: 2px;
+}
+
+#changetask{
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.bigtext{
+  font-size: 24px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  text-indent: -1em;
+}
+
+li {
+  margin-top: 5px;
+}
+
+.shadowsquare{
+  padding: 20px;
+  background-color: #fff;
+  -moz-border-radius: 10px;
+  border: 1px solid #ccc;
+  -moz-box-shadow: 2px 2px 5px #aaa;
+}
+
+#history-wrapper{
+  margin-top: 20px;
+}
+
+div.fifty {
+    width: 48%;
+    float: left;
+}
+
+.clear{
+  clear: both;
+}
+
+.grouprow{
+  height: 25px;
+  background-color: #ddd;
+}
+.totalrow{
+  background-color: #444;
+  color: #fff;
+}

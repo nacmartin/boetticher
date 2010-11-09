@@ -1,0 +1,7 @@
+TaskGroup:
+  interacso:
+    name: Interacso
+    sfGuardUser: User_admin
+  ruso:
+    name: Ruso
+    sfGuardUser: User_admin

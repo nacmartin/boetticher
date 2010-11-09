@@ -1,12 +1,19 @@
 TaskGroup:
   columns:
     name: { type: string(255), notnull: true}
+    user_id: { type: integer, notnull: true}
+  relations:
+    sfGuardUser:
+      local: user_id
+      foreign: id
+      foreignAlias: Groups
+      onDelete: CASCADE
 
 Task:
   columns:
     name: { type: string(255), notnull: true}
     color: { type: string(6), notnull: true}
-    taskgroup_id: {type: integer, primary: true, notnull: true}
+    taskgroup_id: {type: integer, notnull: true}
   relations:
     TaskGroup:
       local: taskgroup_id
@@ -18,7 +25,7 @@ Uow:
   columns:
     start_time: {type: timestamp, notnull: true}
     end_time: {type: timestamp}
-    task_id: {type: integer, primary: true, notnull: true}
+    task_id: {type: integer, notnull: true}
   relations:
     Task:
       local: task_id
@@ -26,4 +33,15 @@ Uow:
       foreignAlias: Uows
       onDelete: CASCADE
 
+Daystat:
+  columns:
+    day: {type: date, notnull: true}
+    task_id: {type: integer, notnull: true}
+    minutes: {type: integer, notnull: true}
+  relations:
+    Task:
+      local: task_id
+      foreign: id
+      foreignAlias: Daystats
+      onDelete: CASCADE
 

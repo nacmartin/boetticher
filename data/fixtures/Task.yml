@@ -1,0 +1,10 @@
+Task:
+  abintranet:
+    color: ffdddd
+    name:  abintranet
+    TaskGroup: interacso
+
+  multiblog:
+    color: ddffdd
+    name:  multiblog
+    TaskGroup: ruso
