@@ -9,6 +9,25 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <div id="menu">
+      <ul>
+        <li>
+          <?php echo link_to('Tasks', '@task') ?>
+        </li>
+        <li>
+          <?php echo link_to('Groups', '@task_group') ?>
+        </li>
+        <li>
+          <?php echo link_to('UOWs', '@uow') ?>
+        </li>
+        <li>
+          <?php echo link_to('Users', 'sf_guard_user') ?>
+        </li>
+        <li>
+          <?php echo link_to('Logout', 'sf_guard_signout') ?>
+        </li>
+      </ul>
+    </div>
     <?php echo $sf_content ?>
   </body>
 </html>

@@ -23,6 +23,11 @@ a {
 
 .history-wrapper{
   clear:both;
+  margin-top: 20px;
+}
+
+.summarytab{
+  margin-bottom: 20px;
 }
 
 div.topline
@@ -78,6 +83,7 @@ div.topline li
   background-color: #fff;
   -moz-border-radius: 10px;
   border: 1px solid #ccc;
+  margin-bottom: 20px;
   -moz-box-shadow: 2px 2px 5px #aaa;
 }
 
@@ -115,6 +121,7 @@ td {
 
 #changetask{
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
 
@@ -142,6 +149,7 @@ li {
 
 #history-wrapper{
   margin-top: 20px;
+  width: 400px;
 }
 
 div.fifty {
@@ -160,4 +168,41 @@ div.fifty {
 .totalrow{
   background-color: #444;
   color: #fff;
+}
+
+#menu
+{
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+  background-color: #fff;
+}
+
+#menu li
+{
+  margin-right: 15px;
+  display: inline;
+}
+
+fieldset {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid #999;
+  padding: 5px;
+  background: #dfdfdf;
+  margin-top: 10px;
+}
+
+legend {
+  background: #888;
+  border: solid 1px #999;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px;
 }

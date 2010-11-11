@@ -1,0 +1,15 @@
+#menu
+{
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+  background-color: #fff;
+}
+
+#menu li
+{
+  margin-right: 15px;
+  display: inline;
+}
+

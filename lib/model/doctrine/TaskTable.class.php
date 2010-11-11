@@ -21,8 +21,8 @@ class TaskTable extends Doctrine_Table
   {
     // Doctrine
     $tasks = Doctrine_Query::create()->
-      from('Task t')->
-      leftJoin('t.TaskGroup g')->
+      from('TaskGroup g')->
+      leftJoin('g.Tasks t')->
       where('g.user_id = ?', $user_id)->
       fetchArray();
     return $tasks;
