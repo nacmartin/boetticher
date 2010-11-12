@@ -18,12 +18,14 @@ abstract class BaseTaskGroupForm extends BaseFormDoctrine
       'id'      => new sfWidgetFormInputHidden(),
       'name'    => new sfWidgetFormInputText(),
       'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
+      'hidden'  => new sfWidgetFormInputCheckbox(),
     ));
 
     $this->setValidators(array(
       'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'name'    => new sfValidatorString(array('max_length' => 255)),
       'user_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
+      'hidden'  => new sfValidatorBoolean(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('task_group[%s]');

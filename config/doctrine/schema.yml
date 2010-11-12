@@ -2,6 +2,7 @@ TaskGroup:
   columns:
     name: { type: string(255), notnull: true}
     user_id: { type: integer, notnull: true}
+    hidden: { type: boolean, default: false}
   relations:
     sfGuardUser:
       local: user_id
@@ -14,6 +15,7 @@ Task:
     name: { type: string(255), notnull: true}
     color: { type: string(6), notnull: true}
     taskgroup_id: {type: integer, notnull: true}
+    hidden: { type: boolean, default: false}
   relations:
     TaskGroup:
       local: taskgroup_id

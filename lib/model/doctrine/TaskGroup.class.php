@@ -12,4 +12,8 @@
  */
 class TaskGroup extends BaseTaskGroup
 {
+  public function __toString(){
+    return $this['name']." (".$this['sfGuardUser']['username'].")";
+  }
+
 }

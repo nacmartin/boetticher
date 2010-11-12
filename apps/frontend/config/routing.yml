@@ -14,6 +14,26 @@ task_stop:
   url:   /task-stop/:id
   param: { module: task, action: stop }
 
+task_edit_visible:
+  url:   /task-visibility
+  param: { module: task, action: visible }
+
+task_edit:
+  url:   /task-edit/:id
+  param: { module: task, action: edit }
+
+task_new:
+  url:   /task-new/:id
+  param: { module: task, action: new }
+
+group_edit:
+  url:   /group-edit/:id
+  param: { module: task, action: edit }
+
+group_new:
+  url:   /group-new/:id
+  param: { module: task, action: new }
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

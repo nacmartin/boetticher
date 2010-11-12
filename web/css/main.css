@@ -42,10 +42,10 @@ div.topline
 .topline a:link,
 .topline a:active,
 {
-	text-decoration: none;
-	color: #ccc;
-	text-transform: lowercase;
-    text-decoration: underline;
+  text-decoration: none;
+  color: #ccc;
+  text-transform: lowercase;
+  text-decoration: underline;
 }
 
 div.topline ul
@@ -81,6 +81,8 @@ div.topline li
 #active-task{
   padding: 5px;
   background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
@@ -96,6 +98,8 @@ td {
 }
 
 .taskbox{
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border: 1px solid #aaa;
   padding: 3px;
@@ -142,6 +146,8 @@ li {
 .shadowsquare{
   padding: 20px;
   background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border: 1px solid #ccc;
   -moz-box-shadow: 2px 2px 5px #aaa;
@@ -153,8 +159,8 @@ li {
 }
 
 div.fifty {
-    width: 48%;
-    float: left;
+  width: 48%;
+  float: left;
 }
 
 .clear{

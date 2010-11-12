@@ -7,15 +7,18 @@
  * 
  * @property string $name
  * @property integer $user_id
+ * @property boolean $hidden
  * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $Tasks
  * 
  * @method string              getName()        Returns the current record's "name" value
  * @method integer             getUserId()      Returns the current record's "user_id" value
+ * @method boolean             getHidden()      Returns the current record's "hidden" value
  * @method sfGuardUser         getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method Doctrine_Collection getTasks()       Returns the current record's "Tasks" collection
  * @method TaskGroup           setName()        Sets the current record's "name" value
  * @method TaskGroup           setUserId()      Sets the current record's "user_id" value
+ * @method TaskGroup           setHidden()      Sets the current record's "hidden" value
  * @method TaskGroup           setSfGuardUser() Sets the current record's "sfGuardUser" value
  * @method TaskGroup           setTasks()       Sets the current record's "Tasks" collection
  * 
@@ -37,6 +40,10 @@ abstract class BaseTaskGroup extends sfDoctrineRecord
         $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
+             ));
+        $this->hasColumn('hidden', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
              ));
     }
 

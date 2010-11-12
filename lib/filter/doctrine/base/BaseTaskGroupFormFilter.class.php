@@ -15,11 +15,13 @@ abstract class BaseTaskGroupFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'name'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
+      'hidden'  => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
     ));
 
     $this->setValidators(array(
       'name'    => new sfValidatorPass(array('required' => false)),
       'user_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
+      'hidden'  => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
     ));
 
     $this->widgetSchema->setNameFormat('task_group_filters[%s]');
@@ -42,6 +44,7 @@ abstract class BaseTaskGroupFormFilter extends BaseFormFilterDoctrine
       'id'      => 'Number',
       'name'    => 'Text',
       'user_id' => 'ForeignKey',
+      'hidden'  => 'Boolean',
     );
   }
 }

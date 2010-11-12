@@ -19,6 +19,7 @@ abstract class BaseTaskForm extends BaseFormDoctrine
       'name'         => new sfWidgetFormInputText(),
       'color'        => new sfWidgetFormInputText(),
       'taskgroup_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskGroup'), 'add_empty' => false)),
+      'hidden'       => new sfWidgetFormInputCheckbox(),
     ));
 
     $this->setValidators(array(
@@ -26,6 +27,7 @@ abstract class BaseTaskForm extends BaseFormDoctrine
       'name'         => new sfValidatorString(array('max_length' => 255)),
       'color'        => new sfValidatorString(array('max_length' => 6)),
       'taskgroup_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TaskGroup'))),
+      'hidden'       => new sfValidatorBoolean(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('task[%s]');

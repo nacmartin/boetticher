@@ -16,12 +16,14 @@ abstract class BaseTaskFormFilter extends BaseFormFilterDoctrine
       'name'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'color'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'taskgroup_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskGroup'), 'add_empty' => true)),
+      'hidden'       => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
     ));
 
     $this->setValidators(array(
       'name'         => new sfValidatorPass(array('required' => false)),
       'color'        => new sfValidatorPass(array('required' => false)),
       'taskgroup_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('TaskGroup'), 'column' => 'id')),
+      'hidden'       => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
     ));
 
     $this->widgetSchema->setNameFormat('task_filters[%s]');
@@ -45,6 +47,7 @@ abstract class BaseTaskFormFilter extends BaseFormFilterDoctrine
       'name'         => 'Text',
       'color'        => 'Text',
       'taskgroup_id' => 'ForeignKey',
+      'hidden'       => 'Boolean',
     );
   }
 }
